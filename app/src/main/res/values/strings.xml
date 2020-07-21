@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">RecyclerSample</string>
+    <string name="flower1">Lily</string>
+    <string name="flower2">Poppy</string>
+    <string name="flower3">Sunflower</string>
+    <string name="flower4">Freesia</string>
+    <string name="flower5">Daisy</string>
 </resources>
