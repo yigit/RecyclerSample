@@ -22,20 +22,14 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
 class MainActivity : AppCompatActivity() {
-    lateinit var wordList : List<String>
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        wordList = listOf(
-            getString(R.string.flower1),
-            getString(R.string.flower2),
-            getString(R.string.flower3),
-            getString(R.string.flower4),
-            getString(R.string.flower5))
+        val wordList = Datasource().loadFlowers()
 
         val recyclerView: RecyclerView = findViewById(R.id.recycler_view)
-        recyclerView.adapter = FlowerAdapter(wordList)
+        recyclerView.adapter = FlowerAdapter(this, wordList)
         recyclerView.layoutManager = LinearLayoutManager(this)
     }
 }

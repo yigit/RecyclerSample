@@ -16,13 +16,14 @@
 
 package com.example.recyclersample
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class FlowerAdapter(val wordList: List<String>) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+class FlowerAdapter(private val context: Context, val wordList: List<Int>) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     class FlowerViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
         val flowerTextView:TextView = itemView.findViewById(R.id.flower)
 
@@ -43,6 +44,6 @@ class FlowerAdapter(val wordList: List<String>) : RecyclerView.Adapter<RecyclerV
     }
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
-        (holder as FlowerViewHolder).bind(wordList[position])
+        (holder as FlowerViewHolder).bind(context.getString(wordList[position]))
     }
 }
