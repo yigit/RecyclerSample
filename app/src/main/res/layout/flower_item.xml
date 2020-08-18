@@ -14,17 +14,15 @@
   ~ See the License for the specific language governing permissions and
   ~ limitations under the License.
   -->
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal"
-    android:layout_width="match_parent"
-    android:layout_height="48dp">
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="wrap_content">
+
     <TextView
-        android:id="@+id/flower"
-        android:layout_width="match_parent"
+        android:id="@+id/flower_text"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="20dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginBottom="12dp"
-        android:textAppearance="?android:attr/textAppearanceMedium"/>
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:textSize="50dp"
+        android:text="TextView" />
+</FrameLayout>
