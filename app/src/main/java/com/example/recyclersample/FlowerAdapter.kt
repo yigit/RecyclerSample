@@ -16,15 +16,17 @@
 
 package com.example.recyclersample
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class FlowerAdapter(val wordList: List<String>) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+class FlowerAdapter(private val context: Context, val flowerList: List<Int>) : RecyclerView.Adapter<FlowerAdapter.FlowerViewHolder>() {
+
     class FlowerViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
-        val flowerTextView:TextView = itemView.findViewById(R.id.flower)
+        val flowerTextView:TextView = itemView.findViewById(R.id.flower_text)
 
         fun bind(word: String){
             flowerTextView.text = word
@@ -32,17 +34,17 @@ class FlowerAdapter(val wordList: List<String>) : RecyclerView.Adapter<RecyclerV
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FlowerViewHolder {
-        val viewInflator = LayoutInflater.from(parent.context)
+        val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.flower_item, parent, false)
 
-        return FlowerViewHolder(viewInflator)
+        return FlowerViewHolder(view)
     }
 
     override fun getItemCount(): Int {
-        return wordList.size
+        return flowerList.size
     }
 
-    override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
-        (holder as FlowerViewHolder).bind(wordList[position])
+    override fun onBindViewHolder(holder: FlowerViewHolder, position: Int) {
+        holder.bind(context.getString(flowerList[position]))
     }
 }

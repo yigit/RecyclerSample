@@ -20,4 +20,12 @@
     <string name="flower3">Sunflower</string>
     <string name="flower4">Freesia</string>
     <string name="flower5">Daisy</string>
+    <string name="flower6">Rose</string>
+    <string name="flower7">Daffodil</string>
+    <string name="flower8">Lavender</string>
+    <string name="flower9">Peony</string>
+    <string name="flower10">Lilac</string>
+    <string name="flower11">Dahlia</string>
+    <string name="flower12">Tulip</string>
+    <string name="flower13">Dandelion</string>
 </resources>
