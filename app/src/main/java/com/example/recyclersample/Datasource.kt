@@ -1,8 +1,8 @@
 package com.example.recyclersample
 
-class Datasource() {
+class Datasource {
     fun loadFlowers(): List<Int> {
-        return listOf<Int>(
+        return listOf(
             R.string.flower1,
             R.string.flower2,
             R.string.flower3,
