@@ -1,21 +1,24 @@
 package com.example.recyclersample
 
-class Datasource {
-    fun loadFlowers(): List<Int> {
-        return listOf(
-            R.string.flower1,
-            R.string.flower2,
-            R.string.flower3,
-            R.string.flower4,
-            R.string.flower5,
-            R.string.flower6,
-            R.string.flower7,
-            R.string.flower8,
-            R.string.flower9,
-            R.string.flower10,
-            R.string.flower11,
-            R.string.flower12,
-            R.string.flower13
+import android.content.Context
+
+class Datasource(private val context: Context) {
+    fun loadFlowers(): MutableList<String> {
+        context.getString(R.string.flower1)
+        return mutableListOf(
+            context.getString(R.string.flower1),
+            context.getString(R.string.flower2),
+            context.getString(R.string.flower3),
+            context.getString(R.string.flower4),
+            context.getString(R.string.flower5),
+            context.getString(R.string.flower6),
+            context.getString(R.string.flower7),
+            context.getString(R.string.flower8),
+            context.getString(R.string.flower9),
+            context.getString(R.string.flower10),
+            context.getString(R.string.flower11),
+            context.getString(R.string.flower12),
+            context.getString(R.string.flower13)
         )
     }
 }

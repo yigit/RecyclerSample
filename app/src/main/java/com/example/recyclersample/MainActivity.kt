@@ -26,10 +26,16 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val flowerList = Datasource().loadFlowers()
+        val flowerList = Datasource(this).loadFlowers()
+
+        val flowerAdapter = FlowerAdapter()
 
         val recyclerView: RecyclerView = findViewById(R.id.recycler_view)
-        recyclerView.adapter = FlowerAdapter(this, flowerList)
+        recyclerView.adapter = flowerAdapter
         recyclerView.layoutManager = LinearLayoutManager(this)
+        for(s in flowerList){
+            println("HELLO: " + s)
+        }
+        flowerAdapter.submitList(flowerList)
     }
 }

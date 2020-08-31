@@ -16,7 +16,6 @@
 
 package com.example.recyclersample
 
-import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -25,7 +24,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 
-class FlowerAdapter(private val context: Context, val flowerList: List<Int>) : ListAdapter<String, FlowerAdapter.FlowerViewHolder>(
+class FlowerAdapter : ListAdapter<String, FlowerAdapter.FlowerViewHolder>(
     FlowerDiffCallback()
 ) {
 
@@ -44,12 +43,8 @@ class FlowerAdapter(private val context: Context, val flowerList: List<Int>) : L
         return FlowerViewHolder(view)
     }
 
-    override fun getItemCount(): Int {
-        return flowerList.size
-    }
-
     override fun onBindViewHolder(holder: FlowerViewHolder, position: Int) {
-        holder.bind(context.getString(flowerList[position]))
+        holder.bind(getItem(position))
     }
 }
 
