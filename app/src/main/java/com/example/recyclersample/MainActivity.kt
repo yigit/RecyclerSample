@@ -27,15 +27,11 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val flowerList = Datasource(this).loadFlowers()
-
         val flowerAdapter = FlowerAdapter()
 
         val recyclerView: RecyclerView = findViewById(R.id.recycler_view)
         recyclerView.adapter = flowerAdapter
         recyclerView.layoutManager = LinearLayoutManager(this)
-        for(s in flowerList){
-            println("HELLO: " + s)
-        }
         flowerAdapter.submitList(flowerList)
     }
 }

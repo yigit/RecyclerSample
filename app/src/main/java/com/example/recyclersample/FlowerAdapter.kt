@@ -39,7 +39,6 @@ class FlowerAdapter : ListAdapter<String, FlowerAdapter.FlowerViewHolder>(
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FlowerViewHolder {
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.flower_item, parent, false)
-
         return FlowerViewHolder(view)
     }
 
