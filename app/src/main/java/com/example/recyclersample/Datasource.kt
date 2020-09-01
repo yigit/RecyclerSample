@@ -4,7 +4,6 @@ import android.content.Context
 
 class Datasource(private val context: Context) {
     fun loadFlowers(): MutableList<String> {
-        context.getString(R.string.flower1)
         return mutableListOf(
             context.getString(R.string.flower1),
             context.getString(R.string.flower2),
