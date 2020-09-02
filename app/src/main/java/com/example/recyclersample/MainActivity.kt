@@ -26,10 +26,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val flowerList = Datasource().loadFlowers()
+        val flowerList = resources.getStringArray(R.array.flower_array)
 
         val recyclerView: RecyclerView = findViewById(R.id.recycler_view)
-        recyclerView.adapter = FlowerAdapter(this, flowerList)
+        recyclerView.adapter = FlowerAdapter(flowerList)
         recyclerView.layoutManager = LinearLayoutManager(this)
     }
 }

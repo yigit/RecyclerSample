@@ -23,7 +23,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class FlowerAdapter(private val context: Context, val flowerList: List<Int>) : RecyclerView.Adapter<FlowerAdapter.FlowerViewHolder>() {
+class FlowerAdapter(val flowerList: Array<String>) : RecyclerView.Adapter<FlowerAdapter.FlowerViewHolder>() {
 
     class FlowerViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
         val flowerTextView:TextView = itemView.findViewById(R.id.flower_text)
@@ -45,6 +45,6 @@ class FlowerAdapter(private val context: Context, val flowerList: List<Int>) : R
     }
 
     override fun onBindViewHolder(holder: FlowerViewHolder, position: Int) {
-        holder.bind(context.getString(flowerList[position]))
+        holder.bind(flowerList[position])
     }
 }
