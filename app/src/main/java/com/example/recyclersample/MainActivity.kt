@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val flowerList = Datasource(this).loadFlowers()
+        val flowerList = resources.getStringArray(R.array.flower_array).toMutableList()
         val flowerAdapter = FlowerAdapter()
 
         val recyclerView: RecyclerView = findViewById(R.id.recycler_view)

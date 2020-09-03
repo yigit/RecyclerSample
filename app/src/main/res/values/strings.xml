@@ -15,17 +15,20 @@
   -->
 <resources>
     <string name="app_name">RecyclerSample</string>
-    <string name="flower1">Lily</string>
-    <string name="flower2">Poppy</string>
-    <string name="flower3">Sunflower</string>
-    <string name="flower4">Freesia</string>
-    <string name="flower5">Daisy</string>
-    <string name="flower6">Rose</string>
-    <string name="flower7">Daffodil</string>
-    <string name="flower8">Lavender</string>
-    <string name="flower9">Peony</string>
-    <string name="flower10">Lilac</string>
-    <string name="flower11">Dahlia</string>
-    <string name="flower12">Tulip</string>
-    <string name="flower13">Dandelion</string>
+
+    <string-array name="flower_array">
+        <item>Lily</item>
+        <item>Poppy</item>
+        <item>Sunflower</item>
+        <item>Freesia</item>
+        <item>Daisy</item>
+        <item>Rose</item>
+        <item>Daffodil</item>
+        <item>Lavender</item>
+        <item>Peony</item>
+        <item>Lilac</item>
+        <item>Dahlia</item>
+        <item>Tulip</item>
+        <item>Dandelion</item>
+    </string-array>
 </resources>
