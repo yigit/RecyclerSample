@@ -33,6 +33,5 @@ class MainActivity : AppCompatActivity() {
         recyclerView.adapter = flowerAdapter
         recyclerView.layoutManager = LinearLayoutManager(this)
         flowerAdapter.submitList(flowerList)
-
     }
 }
