@@ -44,6 +44,9 @@ class FlowerAdapter : ListAdapter<String, FlowerAdapter.FlowerViewHolder>(
 
     override fun onBindViewHolder(holder: FlowerViewHolder, position: Int) {
         holder.bind(getItem(position))
+        holder.itemView.setOnClickListener {
+            println("Flower: " + getItem(position))
+        }
     }
 }
 

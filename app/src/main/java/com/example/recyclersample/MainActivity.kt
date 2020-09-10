@@ -16,12 +16,16 @@
 
 package com.example.recyclersample
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
 class MainActivity : AppCompatActivity() {
+    private val newFlowerActivityRequestCode = 1
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -33,5 +37,11 @@ class MainActivity : AppCompatActivity() {
         recyclerView.adapter = flowerAdapter
         recyclerView.layoutManager = LinearLayoutManager(this)
         flowerAdapter.submitList(flowerList)
+
+        val fab: View = findViewById(R.id.fab)
+        fab.setOnClickListener { view ->
+            val intent = Intent(this@MainActivity, AddFlowerActivity(flowerList)::class.java)
+            startActivityForResult(intent, newFlowerActivityRequestCode)
+        }
     }
 }

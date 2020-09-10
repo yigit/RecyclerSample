@@ -15,6 +15,8 @@
   -->
 <resources>
     <string name="app_name">RecyclerSample</string>
+    <string name="add_flower">Add Flower</string>
+    <string name="flower_name">Flower Name</string>
 
     <string-array name="flower_array">
         <item>Lily</item>
